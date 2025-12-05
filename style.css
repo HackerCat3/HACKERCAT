@@ -1,0 +1,33 @@
+h1 {
+        color: rgba(132, 0, 255, 0.911);
+        overflow-wrap: break-word;
+    }
+    
+    img {
+        border: 5px solid rgb(4, 212, 0);
+        width: 300px; 
+    }
+    .floating-box {
+        position: absolute;
+        background-color: rgb(115, 255, 0);
+        width: 10px;
+        height: 10px;
+        animation-name: moveAround;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes colorChanger {
+        0% {background-color: rgb(115, 255, 0);}
+        50% {background-color: rgb(238, 161, 255);}
+        100% {background-color: rgb(115, 255, 0);}
+    }
+    @keyframes moveAround {
+        0% {transform: translateY(0px);}
+        50% {transform: translateY(-20px);}
+        100% {transform: translateY(0px);}
+    }
+body {
+    animation-name: colorChanger;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
